@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register - Recruitment Management System</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .login-container {
+      padding: 60px 0;
+    }
+    .login-form {
+      max-width: 400px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Recruitment Portal</a>
+  </nav>
+
+  <!-- Login/Register Form Section -->
+  <section class="login-container">
+    <div class="container">
+      <div class="login-form">
+        <h3 class="text-center mb-4">Login or Register</h3>
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="authTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab">Register</a>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4" id="authTabContent">
+
+          <!-- Login Tab -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel">
+            <form id="loginForm">
+              <!-- User Role Selection -->
+              <div class="form-group">
+                <label for="role">Select Role</label>
+                <select class="form-control" id="loginRole" required>
+                  <option value="applicant">Applicant</option>
+                  <option value="hr">HR</option>
+                  <option value="manager">Manager</option>
+                  <option value="interviewer">Interviewer</option>
+                  <option value="admin">Admin</option>
+                </select>
+              </div>
+
+              <!-- Username/Email Input -->
+              <div class="form-group">
+                <label for="username">Username or Email</label>
+                <input type="text" class="form-control" id="loginUsername" placeholder="Enter username or email" required>
+              </div>
+
+              <!-- Password Input -->
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+          </div>
+
+          <!-- Register Tab -->
+          <div class="tab-pane fade" id="register" role="tabpanel">
+            <form id="registerForm">
+              <!-- User Role Selection -->
+              <div class="form-group">
+                <label for="registerRole">Select Role</label>
+                <select class="form-control" id="registerRole" required>
+                  <option value="applicant">Applicant</option>
+                  <option value="hr">HR</option>
+                  <option value="manager">Manager</option>
+                  <option value="interviewer">Interviewer</option>
+                </select>
+              </div>
+
+              <!-- Username/Email Input -->
+              <div class="form-group">
+                <label for="registerUsername">Username or Email</label>
+                <input type="text" class="form-control" id="registerUsername" placeholder="Enter username or email" required>
+              </div>
+
+              <!-- Password Input -->
+              <div class="form-group">
+                <label for="registerPassword">Password</label>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Enter password" required>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+          </div>
+
+        </div>
+
+        <p class="text-center mt-4"><a href="#">Forgot your password?</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Recruitment Management System | Contact us at info@company.com</p>
+  </footer>
+
+  <!-- Bootstrap and jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Custom Script for Routing -->
+  <script>
+    // Dummy login logic
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const role = document.getElementById("loginRole").value;
+      let redirectUrl = '';
+
+      // Route user to respective portal based on selected role
+      switch(role) {
+        case "applicant":
+          redirectUrl = "applicant.html"; // Replace with actual applicant portal URL
+          break;
+        case "hr":
+          redirectUrl = "hr-dashboard.html"; // Replace with actual HR portal URL
+          break;
+        case "manager":
+          redirectUrl = "manager-dashboard.html"; // Replace with actual manager portal URL
+          break;
+        case "interviewer":
+          redirectUrl = "interviewer-dashboard.html"; // Replace with actual interviewer portal URL
+          break;
+        default:
+          redirectUrl = "#";
+      }
+
+      window.location.href = redirectUrl;
+    });
+
+    // Dummy registration logic
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      // Handle registration form data and routing
+      alert("Registration successful! You can now log in.");
+      // After registration, you can show the login tab or redirect.
+    });
+  </script>
+</body>
+</html>

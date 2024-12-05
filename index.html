@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recruitment Portal</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?office') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+    }
+    .user-option-card {
+      transition: transform 0.3s ease;
+    }
+    .user-option-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Recruitment Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <h1>Welcome to Our Recruitment Portal</h1>
+      <p class="lead">Streamline your journey to finding the perfect job or applicant.</p>
+      <a href="login.html" class="btn btn-success btn-lg mt-3">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- User Options Section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Select Your Role</h2>
+    <div class="row">
+      <!-- Applicant -->
+      <div class="col-md-4">
+        <div class="card user-option-card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Applicant</h5>
+            <p class="card-text">Looking for a job? Apply now and track your application status.</p>
+            <a href="login.html" class="btn btn-primary">Go to Applicant Portal</a>
+          </div>
+        </div>
+      </div>
+      <!-- HR -->
+      <div class="col-md-4">
+        <div class="card user-option-card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">HR</h5>
+            <p class="card-text">Manage applications, forward or reject, and send offers to applicants.</p>
+            <a href="login.html" class="btn btn-primary">Go to HR Portal</a>
+          </div>
+        </div>
+      </div>
+      <!-- Manager -->
+      <div class="col-md-4">
+        <div class="card user-option-card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Manager</h5>
+            <p class="card-text">Schedule interviews and make final decisions on applicants.</p>
+            <a href="login.html" class="btn btn-primary">Go to Manager Portal</a>
+          </div>
+        </div>
+      </div>
+      <!-- Interviewer -->
+      <div class="col-md-4 mt-4">
+        <div class="card user-option-card text-center shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Interviewer</h5>
+            <p class="card-text">Conduct interviews and provide feedback for each applicant.</p>
+            <a href="login.html" class="btn btn-primary">Go to Interviewer Portal</a>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>&copy; 2024 Recruitment Management System | Contact us at info@company.com</p>
+  </footer>
+
+  <!-- Bootstrap and jQuery scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
